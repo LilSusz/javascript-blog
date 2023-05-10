@@ -120,7 +120,7 @@ function generateTags(){
     for(let tag of articleTagsArray){
 
       /* [DONE] generate HTML of the link */
-      const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+      const linkHTML = '<li><a href="#tag-' + tag + '">' + tag +'</a></li>';
       console.log('new tags:', linkHTML);
 
       /* [DONE] add generated code to html variable */
@@ -182,13 +182,19 @@ function tagClickHandler(event){
 }
 
 function addClickListenersToTags(){
-  /* find all links to tags */
+
+  /* [DONE] find all links to tags */
+  const allTagsLinks = document.querySelectorAll('a[href^="#tag-"]');
 
   /* START LOOP: for each link */
+  for(let allTagLink of allTagsLinks) {
 
     /* add tagClickHandler as event listener for that link */
+    allTagLink.addEventListener('click', tagClickHandler);
 
   /* END LOOP: for each link */
+  }
+
 }
 
 addClickListenersToTags();
