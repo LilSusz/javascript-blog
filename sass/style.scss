@@ -93,6 +93,10 @@ body {
   }
 }
 
+.list.tags li {
+  display: inline-block;
+}
+
 /* Authors */
 
 .authors {
@@ -113,12 +117,43 @@ body {
 
 .post-author {
   font-style: italic;
+  list-style-type: none;
 }
 
 .post-tags {
   display: flex;
-  
+
   p {
     margin: 0 10px 0 0;
   }
 }
+a {
+  text-decoration: none;
+}
+
+ /* Tag Size */
+ .tag-size-1 {
+  font-size: 110%;
+  color: red;
+}
+
+.tag-size-2 {
+  font-size: 120%;
+  color: blue;
+}
+
+.tag-size-3 {
+  font-size: 130%;
+  color: green;
+}
+
+.tag-size-4 {
+  font-size: 140%;
+  color: yellow;
+}
+
+.tag-size-5 {
+  font-size: 150%;
+  color: purple;
+}
+
