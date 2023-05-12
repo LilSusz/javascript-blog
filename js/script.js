@@ -114,7 +114,7 @@ function calculateTagsParams(tags) {
     if (tags[tag] < params.min) {
       params.min = tags[tag];
     }
-    console.log(tag + ' is used ' + tags[tag] + ' times');
+    //console.log(tag + ' is used ' + tags[tag] + ' times');
   }
 
   return params;
@@ -182,7 +182,7 @@ function generateTags() {
       } else {
         allTags[tag]++;
       }
-      console.log('allTags', allTags);
+      //console.log('allTags', allTags);
 
       /* [DONE] END LOOP: for each tag */
     }
@@ -203,7 +203,7 @@ function generateTags() {
   //console.log('allTags', allTags);
   /* [NEW] create variable for all links HTML code */
   const tagsParams = calculateTagsParams(allTags);
-  console.log('tagsParams', tagsParams);
+  //console.log('tagsParams', tagsParams);
   let allTagsHTML = '';
 
   /* [NEW] START LOOP: for each tag in allTags: */
@@ -212,7 +212,7 @@ function generateTags() {
     /* [NEW] generate code of a link and add it to allTagsHTML */
     //allTagsHTML += tag + ' (' + allTags[tag] + ') ';
     const tagLinkHTML = '<li><a href="#tag-' + tag + '" class="' + calculateTagClass(allTags[tag], tagsParams) + '">' + tag + '</a></li>';
-    console.log('tagLinkHTML', tagLinkHTML);
+    //console.log('tagLinkHTML', tagLinkHTML);
     allTagsHTML += tagLinkHTML; //'<li><a href="#tag-' + tag + '"class="' + tagLinkHTML + '">' + tag + ' (' + allTags[tag] + ')</a></li>';
 
     /* [NEW] END LOOP: for each tag in allTags: */
@@ -329,7 +329,7 @@ function generateAuthors() {
     } else {
       allAuthors[articleAuthor]++;
     }
-    console.log('allAuthors', allAuthors);
+    //console.log('allAuthors', allAuthors);
 
     /* [DONE] insert HTML of all the links into the author wrapper */
     authorWrapper.innerHTML = html;
@@ -351,7 +351,7 @@ function generateAuthors() {
     //allAuthorsHTML += author + ' (' + allAuthors[author] + ') ';
 
     const authorLinkHTML = '<li><a href="#author-' + author + '"><span>' + author + '</span></a></li>';
-    console.log('authorLinkHTML', authorLinkHTML);
+    //console.log('authorLinkHTML', authorLinkHTML);
     allAuthorsHTML += authorLinkHTML;
 
     /* [NEW] END LOOP: for each author in allAuthors: */
